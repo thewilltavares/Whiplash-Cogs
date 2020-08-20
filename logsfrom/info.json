@@ -1,0 +1,19 @@
+{
+    "author": [
+        "Whiplash (Whiplash#6969)"
+    ],
+    "install_msg": "Usage: `[p]help logsfrom`",
+    "name": "LogsFrom",
+    "short": "Log a specified channel to a markdown file.",
+    "description": "Log a specified channel to a markdown file.",
+    "tags": [
+        "logging",
+        "utility"
+    ],
+    "min_python_version": [
+        3,
+        7,
+        0
+    ],
+    "end_user_data_statement": "This cog enables logging messages for bot owners and admins. The bot itself does not persistently store this data."
+}
