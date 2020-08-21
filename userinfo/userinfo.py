@@ -1,4 +1,5 @@
 import asyncio
+import console
 from datetime import datetime
 from typing import cast
 from redbot.core.bot import Red
@@ -23,6 +24,7 @@ class UserInfo(commands.Cog):
     """
     
     async def initialize(self):
+        console.log('ready')
 
     async def get_names_and_nicks(self, user):
         names = await self.config.user(user).past_names()
