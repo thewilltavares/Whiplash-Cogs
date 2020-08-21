@@ -32,7 +32,7 @@ def __init__(self, bot: Red):
         self._ready = asyncio.Event()
 
 
-class ModInfo(MixinMeta):
+class UserInfo(MixinMeta):
     """
     User info command.
     """
