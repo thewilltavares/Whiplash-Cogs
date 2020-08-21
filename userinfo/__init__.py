@@ -7,6 +7,6 @@ __red_end_user_data_statement__ = (
 
 
 async def setup(bot):
-    cog = UserInfo(bot)
+    cog = UserInfo
     await cog.initialize()
     bot.add_cog(cog)
