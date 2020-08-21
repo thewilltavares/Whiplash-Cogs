@@ -18,18 +18,7 @@ from redbot.core.utils.mod import get_audit_reason
 _ = i18n.Translator("uinfo", __file__)
 
 def __init__(self, bot: Red):
-        super().__init__()
         self.bot = bot
-
-        self.config = Config.get_conf(self, 5214888448, force_registration=True)
-        self.config.register_global(**self.default_global_settings)
-        self.config.register_guild(**self.default_guild_settings)
-        self.config.register_channel(**self.default_channel_settings)
-        self.config.register_member(**self.default_member_settings)
-        self.config.register_user(**self.default_user_settings)
-        self.cache: dict = {}
-
-        self._ready = asyncio.Event()
 
 
 class UserInfo(commands.Cog):
