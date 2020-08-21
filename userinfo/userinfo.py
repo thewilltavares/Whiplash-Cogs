@@ -23,7 +23,6 @@ class UserInfo(commands.Cog):
     """
     
     async def initialize(self):
-        self._ready.set()
 
     async def get_names_and_nicks(self, user):
         names = await self.config.user(user).past_names()
