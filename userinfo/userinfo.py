@@ -8,12 +8,11 @@ from redbot.core.utils.common_filters import (
     filter_various_mentions,
     escape_spoilers_and_mass_mentions,
 )
-# from redbot.core.utils.mod import get_audit_reason
-from .abc import MixinMeta
+from redbot.core.utils.mod import get_audit_reason
 
 _ = i18n.Translator("uinfo", __file__)
 
-class UserInfo(MixinMeta):
+class UserInfo(commands.Cog):
     """
     User info command.
     """
