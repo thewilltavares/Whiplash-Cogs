@@ -18,7 +18,9 @@ from redbot.core.utils.mod import get_audit_reason
 _ = i18n.Translator("uinfo", __file__)
 
 def __init__(self, bot: Red):
+        super().__init__()
         self.bot = bot
+        self._ready = asyncio.Event()
 
 
 class UserInfo(commands.Cog):
