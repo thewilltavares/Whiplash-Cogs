@@ -17,13 +17,13 @@ from redbot.core.utils.mod import get_audit_reason
 
 _ = i18n.Translator("uinfo", __file__)
 
-    async def initialize(self):
-        self._ready.set()
-
 class UserInfo(commands.Cog):
     """
     User info command.
     """
+    
+    async def initialize(self):
+        self._ready.set()
 
     async def get_names_and_nicks(self, user):
         names = await self.config.user(user).past_names()
