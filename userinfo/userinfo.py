@@ -26,13 +26,11 @@ def __init__(self, bot: Red):
         self.config.register_member(**self.default_member_settings)
         self.config.register_user(**self.default_user_settings)
         self.cache: dict = {}
-        self.tban_expiry_task = self.bot.loop.create_task(self.check_tempban_expirations())
-        self.last_case: dict = defaultdict(dict)
 
         self._ready = asyncio.Event()
 
 
-class UserInfo(commands.Cog):
+class ModInfo(MixinMeta):
     """
     User info command.
     """
