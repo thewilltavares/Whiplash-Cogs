@@ -13,7 +13,7 @@ from .abc import MixinMeta
 
 _ = i18n.Translator("uinfo", __file__)
 
-class ModInfo(MixinMeta):
+class UserInfo(MixinMeta):
     """
     User info command.
     """
