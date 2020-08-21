@@ -1,3 +1,4 @@
+from redbot.core.bot import Red
 from .userinfo import UserInfo
 
 __red_end_user_data_statement__ = (
