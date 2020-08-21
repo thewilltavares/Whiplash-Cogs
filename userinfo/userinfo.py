@@ -8,7 +8,7 @@ from redbot.core.utils.common_filters import (
     filter_various_mentions,
     escape_spoilers_and_mass_mentions,
 )
-from redbot.core.utils.mod import get_audit_reason
+# from redbot.core.utils.mod import get_audit_reason
 from .abc import MixinMeta
 
 _ = i18n.Translator("uinfo", __file__)
@@ -148,24 +148,3 @@ class UserInfo(MixinMeta):
         data.set_thumbnail(url=avatar)
 
         await ctx.send(embed=data)
-
-    @commands.command()
-    async def names(self, ctx: commands.Context, *, user: discord.Member):
-        """Show previous names and nicknames of a user."""
-        names, nicks = await self.get_names_and_nicks(user)
-        msg = ""
-        if names:
-            msg += _("**Past 20 names**:")
-            msg += "\n"
-            msg += ", ".join(names)
-        if nicks:
-            if msg:
-                msg += "\n\n"
-            msg += _("**Past 20 nicknames**:")
-            msg += "\n"
-            msg += ", ".join(nicks)
-        if msg:
-            msg = filter_various_mentions(msg)
-            await ctx.send(msg)
-        else:
-            await ctx.send(_("That user doesn't have any recorded name or nickname change."))
