@@ -3,7 +3,7 @@ from datetime import datetime
 from typing import cast
 from redbot.core.bot import Red
 from collections import defaultdict
-from .abc import ABC, MixinMeta
+#from .abc import ABC, MixinMeta
 
 
 import discord
@@ -32,7 +32,7 @@ def __init__(self, bot: Red):
         self._ready = asyncio.Event()
 
 
-class UserInfo(MixinMeta):
+class UserInfo(commands.Cog):
     """
     User info command.
     """
