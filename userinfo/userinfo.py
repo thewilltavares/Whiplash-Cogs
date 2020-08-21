@@ -3,7 +3,8 @@ from datetime import datetime
 from typing import cast
 from redbot.core.bot import Red
 from collections import defaultdict
-from .abc import ABC
+from .abc import ABC, MixinMeta
+
 
 import discord
 from redbot.core import commands, i18n, checks, Config
